@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blokes.social — Doing stuff, together.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#121417',
+                            card: '#1c1f24',
+                            cardHover: '#232930',
+                            border: '#2d3239',
+                            amber: '#f59e0b',
+                            amberHover: '#d97706',
+                            text: '#f3f4f6',
+                            muted: '#9ca3af'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-brand-text font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-brand-amber selection:text-black">
+
+    <main class="max-w-md mx-auto w-full px-5 py-8 sm:py-12 flex-1 flex flex-col justify-center">
+        
+        <header class="text-center mb-6">
+            <!-- Logo Box with Blokes Woodgrain Image -->
+            <div class="inline-flex items-center justify-center p-2 rounded-2xl bg-brand-card border border-brand-border mb-4 shadow-xl overflow-hidden">
+                <img 
+                    src="/images/blokes_wood_portrait.jpeg" 
+                    alt="BLOKES Logo" 
+                    class="h-32 sm:h-36 w-auto object-cover rounded-xl shadow-md"
+                    onerror="this.onerror=null; this.src='https://placehold.co/200x200/1c1f24/f3f4f6?text=BLOKES';"
+                />
+            </div>
+
+            <h1 class="text-2xl font-bold tracking-tight text-white mb-1">
+                blokes<span class="text-brand-amber">.social</span>
+            </h1>
+            <p class="text-brand-amber font-semibold text-sm sm:text-base">Doing stuff, together.</p>
+        </header>
+
+        <nav class="flex p-1 bg-brand-card border border-brand-border rounded-xl mb-6 text-xs sm:text-sm font-semibold">
+            <button 
+                id="tab-home" 
+                onclick="switchTab('home')" 
+                class="flex-1 py-2 px-3 rounded-lg transition-all duration-200 bg-brand-amber text-black font-bold shadow-sm"
+            >
+                Home
+            </button>
+            <button 
+                id="tab-pledge" 
+                onclick="switchTab('pledge')" 
+                class="flex-1 py-2 px-3 rounded-lg transition-all duration-200 text-brand-muted hover:text-white"
+            >
+                Aims & Pledge
+            </button>
+        </nav>
+
+        <div id="page-home" class="space-y-6">
+            <section class="space-y-4 text-left">
+                <p class="text-slate-200 text-sm sm:text-base leading-relaxed font-normal">
+                    It’s not always easy being a bloke. Financial, career, political, environmental, social, family, identity …and hence mental pressure are all sky high these days. We don’t have the answers to much of this but we know that going it alone is harder than it is together.
+                </p>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-normal border-l-2 border-brand-amber pl-3.5 py-0.5">
+                    Blokes is a community of men of all ages and backgrounds navigating modern life together. We create space for honest conversation, good advice, and genuine mateship without any political, religious or financial agenda.
+                </p>
+            </section>
+
+            <!-- Join Blokes Action Button -->
+            <section class="pt-2">
+                <a 
+                    href="https://chat.whatsapp.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="w-full bg-brand-amber hover:bg-brand-amberHover text-black font-bold py-4 px-5 rounded-xl transition-all shadow-lg active:scale-[0.99] flex items-center justify-between group"
+                >
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                        </svg>
+                        <span class="text-base font-extrabold tracking-wide">Join Blokes</span>
+                    </div>
+                    <span class="text-xs uppercase font-bold tracking-wider opacity-90 group-hover:translate-x-1 transition-transform">Get Involved →</span>
+                </a>
+            </section>
+        </div>
+
+        <div id="page-pledge" class="hidden space-y-6 text-left">
+            <!-- Community Aims -->
+            <section class="bg-brand-card border border-brand-border p-5 rounded-2xl space-y-3">
+                <h2 class="text-base font-bold text-white flex items-center space-x-2">
+                    <span class="text-brand-amber">#</span>
+                    <span>Community Aims</span>
+                </h2>
+                <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                    <li class="flex items-start space-x-2.5">
+                        <span class="text-brand-amber font-bold mt-0.5">•</span>
+                        <span><strong class="text-white">Shoulder-to-Shoulder Mateship:</strong> Connecting through casual, real-world activities (dinners, casual sports, outdoors, running, cycling, pub hangs) without awkward icebreakers.</span>
+                    </li>
+                    <li class="flex items-start space-x-2.5">
+                        <span class="text-brand-amber font-bold mt-0.5">•</span>
+                        <span><strong class="text-white">Open to All Blokes:</strong> Expanding beyond specific niches (like dads-only) to embrace men of all ages and life stages.</span>
+                    </li>
+                    <li class="flex items-start space-x-2.5">
+                        <span class="text-brand-amber font-bold mt-0.5">•</span>
+                        <span><strong class="text-white">Low Noise, High Value:</strong> Dedicated channels so members only get notifications for activities and topics they care about.</span>
+                    </li>
+                    <li class="flex items-start space-x-2.5">
+                        <span class="text-brand-amber font-bold mt-0.5">•</span>
+                        <span><strong class="text-white">Mental Health Through Activity:</strong> Providing organic support networks and alcohol-free/casual options to catch up and unwind.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Membership Pledge -->
+            <section class="bg-brand-card border border-brand-border p-5 rounded-2xl space-y-3">
+                <h2 class="text-base font-bold text-white flex items-center space-x-2">
+                    <span class="text-brand-amber">#</span>
+                    <span>Membership Pledge</span>
+                </h2>
+                <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                    <li class="flex items-start space-x-2.5">
+                        <span class="text-brand-amber font-bold mt-0.5">•</span>
+                        <span><strong class="text-white">Respect & Inclusivity:</strong> Welcome every bloke regardless of background, career, age, or beliefs. No politics, no preaching, no sales pitches.</span>
+                    </li>
+                    <li class="flex items-start space-x-2.5">
+                        <span class="text-brand-amber font-bold mt-0.5">•</span>
+                        <span><strong class="text-white">Turn Up & Join In:</strong> Keep things informal, casual, and low-pressure. Show up when you can, contribute when you want.</span>
+                    </li>
+                    <li class="flex items-start space-x-2.5">
+                        <span class="text-brand-amber font-bold mt-0.5">•</span>
+                        <span><strong class="text-white">Mates Watch Out for Mates:</strong> Keep conversations confidential, foster genuine trust, and keep communication noise low and respectful.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Action Button on Page 2 -->
+            <div class="pt-2">
+                <a 
+                    href="https://chat.whatsapp.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="w-full bg-brand-amber hover:bg-brand-amberHover text-black font-bold py-3.5 px-5 rounded-xl transition-all shadow-md active:scale-[0.99] flex items-center justify-between group"
+                >
+                    <span class="text-sm font-extrabold tracking-wide">Ready? Join Blokes Now</span>
+                    <span class="text-xs uppercase font-bold tracking-wider opacity-90 group-hover:translate-x-1 transition-transform">Join Group →</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-brand-border/60 py-6 text-center text-xs text-brand-muted max-w-md mx-auto w-full px-5">
+        <p>blokes.social &copy; 2026 — Doing stuff, together.</p>
+    </footer>
+
+    <script>
+        function switchTab(tab) {
+            const pageHome = document.getElementById('page-home');
+            const pagePledge = document.getElementById('page-pledge');
+            const tabHome = document.getElementById('tab-home');
+            const tabPledge = document.getElementById('tab-pledge');
+
+            if (tab === 'home') {
+                pageHome.classList.remove('hidden');
+                pagePledge.classList.add('hidden');
+
+                tabHome.className = "flex-1 py-2 px-3 rounded-lg transition-all duration-200 bg-brand-amber text-black font-bold shadow-sm";
+                tabPledge.className = "flex-1 py-2 px-3 rounded-lg transition-all duration-200 text-brand-muted hover:text-white";
+            } else {
+                pageHome.classList.add('hidden');
+                pagePledge.classList.remove('hidden');
+
+                tabPledge.className = "flex-1 py-2 px-3 rounded-lg transition-all duration-200 bg-brand-amber text-black font-bold shadow-sm";
+                tabHome.className = "flex-1 py-2 px-3 rounded-lg transition-all duration-200 text-brand-muted hover:text-white";
+            }
+        }
+    </script>
+</body>
+</html>
