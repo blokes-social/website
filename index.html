@@ -11,18 +11,18 @@
     
     <style>
         :root {
-            --brand-dark: #121417;
-            --brand-card: #1c1f24;
-            --brand-card-hover: #232930;
-            --brand-border: #2d3239;
-            --brand-border-muted: rgba(45, 50, 57, 0.6);
-            --brand-amber: #f59e0b;
-            --brand-amber-hover: #d97706;
-            --brand-text: #f3f4f6;
-            --brand-muted: #9ca3af;
-            --text-white: #ffffff;
-            --slate-200: #e2e8f0;
-            --slate-300: #cbd5e1;
+            --brand-dark: #0F0507;
+            --brand-card: #1A090D;
+            --brand-card-hover: #240D12;
+            --brand-border: #381219;
+            --brand-border-muted: rgba(56, 18, 25, 0.6);
+            --brand-accent: #6B1724;
+            --brand-accent-hover: #872030;
+            --brand-text: #DFD0BA;
+            --brand-muted: #968673;
+            --text-white: #EADCC3;
+            --slate-200: #D4C1A8;
+            --slate-300: #C7B396;
         }
 
         * {
@@ -44,8 +44,8 @@
         }
 
         ::selection {
-            background-color: var(--brand-amber);
-            color: #000000;
+            background-color: var(--brand-accent);
+            color: var(--text-white);
         }
 
         .main-container {
@@ -107,11 +107,11 @@
         }
 
         .title-highlight {
-            color: var(--brand-amber);
+            color: var(--brand-accent);
         }
 
         .subtitle {
-            color: var(--brand-amber);
+            color: var(--brand-accent);
             font-weight: 600; /* font-semibold */
             font-size: 14px; /* text-sm */
         }
@@ -151,8 +151,8 @@
         }
 
         .tab-btn-active {
-            background-color: var(--brand-amber);
-            color: #000000;
+            background-color: var(--brand-accent);
+            color: var(--text-white);
             font-weight: 700; /* font-bold */
             box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
         }
@@ -195,7 +195,7 @@
             font-size: 14px; /* text-sm */
             line-height: 1.625; /* leading-relaxed */
             font-weight: 400; /* font-normal */
-            border-left: 2px solid var(--brand-amber);
+            border-left: 2px solid var(--brand-accent);
             padding-left: 14px; /* pl-3.5 = 14px */
             padding-top: 2px;
             padding-bottom: 2px; /* py-0.5 */
@@ -213,8 +213,8 @@
 
         .btn-primary {
             width: 100%;
-            background-color: var(--brand-amber);
-            color: #000000;
+            background-color: var(--brand-accent);
+            color: var(--text-white);
             font-weight: 700;
             text-decoration: none;
             border-radius: 12px; /* rounded-xl */
@@ -238,7 +238,7 @@
         }
 
         .btn-primary:hover {
-            background-color: var(--brand-amber-hover);
+            background-color: var(--brand-accent-hover);
         }
 
         .btn-primary:active {
@@ -296,7 +296,7 @@
         }
 
         .card-title-hash {
-            color: var(--brand-amber);
+            color: var(--brand-accent);
         }
 
         .card-list {
@@ -321,7 +321,7 @@
         }
 
         .card-list-bullet {
-            color: var(--brand-amber);
+            color: var(--brand-accent);
             font-weight: 700;
             margin-top: 2px; /* mt-0.5 */
             line-height: 1;
